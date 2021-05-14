@@ -1,0 +1,429 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+<base target="neWin">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Staatliches&family=Vidaloka&display=swap" rel="stylesheet">
+    <meta charset="utf-8">
+    <title>Photo Gallery</title>
+    <style type="text/css">
+    body{
+		background-color: #ebd469;
+	}
+    .head{
+		position: relative;
+		height: 65px;
+		width: 100%;
+		top: 0;
+		left: 0;
+		background: #ac663e;
+	}
+	.head .logo{
+		width: 120px;
+		height: 58px;
+		padding: 3px 100px;
+	}
+
+	.head ul{
+		float: right;
+		margin-right: 20px;
+		margin-top: 10px;
+		
+	}
+	.head ul li{
+		font-family: serif;
+		list-style: none;
+		margin: 0 8px;
+		display: inline-block;
+		line-height: 50px;
+	}
+	.head ul li a{
+		font-size: 20px;
+		font-family: serif;
+		color: #f2fcff;
+		padding:6px 13px;
+		text-decoration: none;
+	}
+	.head ul li a:hover{
+		color:#ab9685;
+		border-bottom: solid;
+		border-radius: 5px;
+	}
+	.head ul li a.active{
+		color:#ac663e;
+		border-bottom: solid;
+		border-top: solid;
+		border-radius: 5px;
+	}
+	.upper{
+		margin-top:50px;
+		height: 40vh;
+		text-shadow:2px 2px 5px #f2fcff;
+	}
+	h1{
+		font-family: Vidaloka, Georgia;
+		word-spacing: 15px;
+		letter-spacing: 7px;
+		text-transform: uppercase;
+		font-size: 8em;;
+		padding: 90px 0 0 0;
+		color: #ac663e;
+		margin-bottom: 0;
+		margin-top: 5px;
+	}
+	.choice a{
+		text-decoration: none;
+		font-family: Montserrat, Tahoma, Serif;
+		letter-spacing: 4px;
+		font-size: 22px;
+		color: #ac663e;
+	}
+	.choice a:hover{
+		padding: 5px;
+		border-top: 3px solid #444443;
+		border-bottom: 3px solid #f2fcff;
+		
+	}
+	.photos{
+		width: auto;
+		height: 180px;
+		padding: 0;
+		margin-bottom: 10px;
+		border-radius: 10px;
+	}
+	img:hover.photos{
+		height: 200px;
+		width: auto;
+		border: outset 5px #ac663e;
+		box-shadow: 0 0 10px 10px #ab9685;
+		border-radius: 10px;
+	}
+	.places{
+		margin: 0 4em 0 4em;
+	}
+	.categ{
+
+		font-family: Staatliches, "Times New Roman", Serif;
+		font-size: 5em;
+		margin: 5px;
+		letter-spacing: 7px;
+		word-spacing: 10px;
+		color: #f2fcff;
+		background-color: #ac663e;
+		width: 14em;
+		text-shadow: 3px 2px #ab9685;
+		padding: 15px;
+		text-transform: uppercase;
+		border-radius:10px;
+	}
+	.foot{ 
+		background-color: #ab9685; 
+		padding: 1em; 
+		font-size: 18px; 
+		color: black; 
+		text-align: center; 
+	} 
+	.foot ul li{ 
+		list-style: none; 
+		text-align: center; 
+		line-height: 1.6; 
+		display: inline-block; 
+		margin: 8px 10px; 
+	} 
+	.foot a{ 
+		text-decoration: underline;
+		color: black; 
+	} 
+	.foot a:hover{ 
+		color: #f2fcff; 
+		background-color: #ab9685; 
+	} 
+	.foot p{ 
+		margin-left: 2em; 
+		text-align: center; 
+		color: #f2fcff; 
+		background-color:#ab9685;
+	} 
+	.foot img{ 
+		margin-left: 1.5em; 
+		height: 70px; 
+		width: auto; 
+	}
+
+    </style>
+</head>
+<body>
+    <link rel="stylesheet" type="text/css">
+	<link rel="stylesheet" type="text/css" href="NavigationDesign.css">
+    <div class="nav">
+		<a href="landingPage(orig).html"><img class="icon" src="medias/img/icon.png" id="icon"></a>
+		<ul>
+			<li class="dh"><a  href="land.html">HOME</a></li>
+            <li class="dh"><a id="active" href="../aboutUs.html">ABOUT US</a></li>  
+            <li class="dropdown">
+                <a href="" class="dropbtn">EXPLORE</a>
+            <div class="dropdown-content">
+                <a href="">History</a>
+                <a href="">Culture</a>
+                <a href="">Travel</a>
+            </div>
+            </li>
+            <li class="dh"><a href="">FUN FACTS</a></li>
+            <li class="dh"><a href="">CONTACT US</a></li>
+		</ul>
+    </div>
+	
+	<div class="upper" align="center">
+	<div class="h1">
+	<h1>Photo Gallery</h1>
+	</div>
+	</div>
+	<br><br>
+	
+	<div class="choice" align="center">
+	<a class="place" href="#authors" title="Images of Authors" target="_self">Authors</a> | 
+	<a class="place" href="#views" title="Picture of places target="_self">Places</a> | 
+	<a class="place" href="#artifacts" title="Images of Artifacts" target="_self">Artifacts</a> |
+	<a class="place" href="#symbols" title="Images of National Symbols" target="_self">National Symbols</a> |
+	<a class="place" href="#legends" title="Images of Legends in the Philippines" target="_self">Legends</a> |
+	<a class="place" href="#dialects" title="Images of Dialects in Philippines" target="_self">Dialects</a> |
+	<a class="place" href="#cuisines" title="Images of Cuisines in Philippines" target="_self">Local Cuisines</a> |
+	<a class="place" href="#Arts" title="Images of Arts/Paintings" target="_self">Arts</a>
+
+
+	</div>
+	<br><hr width="60%" size=10 color=#444443>
+	<hr width="50%" size=10 color=#ac663e><br>
+	<br>
+	
+	<center><h2 class="categ" id="authors">Photos of Authors</h2></center>
+	<br>
+	<div class="places" align="center">
+	<a href="medias/img/p1.jpg" target="neWin">
+		<img class="photos" src="medias/img/p1.jpg" alt="Picture of Authors" title="Picture of Authors" />
+	</a>
+	<a href="medias/img/p2.png" target="neWin">
+		<img class="photos" src="medias/img/p2.png" alt="Picture of Authors" title="Picture of Authors" />
+	</a>
+	<a href="medias/img/p3.jpg" target="neWin">
+		<img class="photos" src="medias/img/p3.jpg" alt="Picture of Authors" title="Picture of Authors" />
+	</a>
+	<a href="medias/img/p4.png" target="neWin">
+		<img class="photos" src="medias/img/p4.png" alt="Picture of Authors" title="Picture of Authors" />
+	</a>
+	<a href="medias/img/p5.jpg" target="neWin">
+		<img class="photos" src="medias/img/p5.jpg" alt="Picture of Authors" title="Picture of Authors" />
+	</a>
+	<a href="medias/img/p6.png" target="neWin">
+		<img class="photos" src="medias/img/p6.png" alt="Picture of Authors" title="Picture of Authors" />
+	</a>
+	<a href="medias/img/p7.jpg" target="neWin">
+		<img class="photos" src="medias/img/p7.jpg" alt="Picture of Authors" title="Picture of Authors" />
+	</a>
+	<a href="medias/img/p8.png" target="neWin">
+		<img class="photos" src="medias/img/p8.png" alt="Picture of Authors" title="Picture of Authors" />
+	</a>
+	</div>
+	<br><br>
+	
+	<center><h2 class="categ" id="views">Places</h2></center>
+	<br>
+	<div class="places" align="center">
+	<a href="medias/img/places/Bagumbungan-cave-1.jpg" target="neWin">
+		<img class="photos" src="medias/img/places/Bagumbungan-cave-1.jpg" alt="Picture of Places" title="Picture of Places" />
+	</a>
+	<a href="medias/img/places/banaue.jfif" target="neWin">
+		<img class="photos" src="medias/img/places/banaue.jfif" alt="Picture of Places" title="Picture of Places" />
+	</a>
+	<a href="medias/img/places/boracay.jfif" target="neWin">
+		<img class="photos" src="medias/img/places/boracay.jfif" alt="Picture of Places" title="Picture of Places" />
+	</a>
+	<a href="medias/img/places/bulusan.jpg" target="neWin">
+		<img class="photos" src="medias/img/places/bulusan.jpg" alt="Picture of Places" title="Picture of Places" />
+	</a>
+	<a href="medias/img/places/casino-peak-cebu-6.jpg" target="neWin">
+		<img class="photos" src="medias/img/places/casino-peak-cebu-6.jpg" alt="Picture of Places" title="Picture of Places" />
+	</a>
+	<a href="medias/img/places/cebu.jfif" target="neWin">
+		<img class="photos" src="medias/img/places/cebu.jfif" alt="Picture of Places" title="Picture of Places" />
+	</a>
+	<a href="medias/img/places/chocolateHills.jfif" target="neWin">
+		<img class="photos" src="medias/img/places/chocolateHills.jfif" alt="Picture of Places" title="Picture of Places" />
+	</a>
+	<a href="medias/img/places/hinatuan.jpg" target="neWin">
+		<img class="photos" src="medias/img/places/hinatuan.jpg" alt="Picture of Places" title="Picture of Places" />
+	</a>
+	<a href="medias/img/places/kawasanFalls.jfif" target="neWin">
+		<img class="photos" src="medias/img/places/kawasanFalls.jfif" alt="Picture of Places" title="Picture of Places" />
+	</a>
+	<a href="medias/img/places/kayanganLake.jfif" target="neWin">
+		<img class="photos" src="medias/img/places/kayanganLake.jfif" alt="Picture of Places" title="Picture of Places" />
+	</a>
+	<a href="medias/img/places/kiokong.jpg" target="neWin">
+		<img class="photos" src="medias/img/places/kiokong.jpg" alt="Picture of Places" title="Picture of Places" />
+	</a>
+	<a href="medias/img/places/niludhudan.jpg" target="neWin">
+		<img class="photos" src="medias/img/places/niludhudan.jpg" alt="Picture of Places" title="Picture of Places" />
+	</a>
+	<a href="medias/img/places/panampangan.jpg" target="neWin">
+		<img class="photos" src="medias/img/places/panampangan.jpg" alt="Picture of Places" title="Picture of Places" />
+	</a>
+	<a href="medias/img/places/puerto.jfif" target="neWin">
+		<img class="photos" src="medias/img/places/puerto.jfif" alt="Picture of Places" title="Picture of Places" />
+	</a>
+	<a href="medias/img/places/rizalPark.jfif" target="neWin">
+		<img class="photos" src="medias/img/places/rizalPark.jfif" alt="Picture of Places" title="Picture of Places" />
+	</a>
+	<a href="medias/img/places/siargao.jfif" target="neWin">
+		<img class="photos" src="medias/img/places/siargao.jfif" alt="Picture of Places" title="Picture of Places" />
+	</a>
+	<a href="medias/img/places/taal.jfif" target="neWin">
+		<img class="photos" src="medias/img/places/taal.jfif" alt="Picture of Places" title="Picture of Places" />
+	</a>
+
+	</div>
+	<br><br>
+	
+	<center><h2 class="categ" id="artifacts">Artifacts</h2></center>
+	<br>
+	<div class="places" align="center">
+	<a href="medias/img/artifacts.jpeg" target="neWin">
+		<img class="photos" src="medias/img/artifacts.jpeg" alt="Picture an artifacts" title="Picture an artifacts" />
+	</a>
+	<a href="medias/img/astrolabe.jpeg" target="neWin">
+		<img class="photos" src="medias/img/astrolabe.jpeg" alt="Picture an artifacts" title="Picture an artifacts" />
+	</a>
+	<a href="medias/img/death blanket.jpg" target="neWin">
+		<img class="photos" src="medias/img/death blanket.jpg" alt="Picture an artifacts" title="Picture an artifacts" />
+	</a>
+	<a href="medias/img/elephant.jpeg" target="neWin">
+		<img class="photos" src="medias/img/elephant.jpeg" alt="Picture an artifacts" title="Picture an artifacts" />
+	</a>
+	<a href="medias/img/lci.jpg" target="neWin">
+		<img class="photos" src="medias/img/lci.jpg" alt="Picture an artifacts" title="Picture an artifacts" />
+	</a>
+	<a href="medias/img/maitum.jpg" target="neWin">
+		<img class="photos" src="medias/img/maitum.jpg" alt="Picture an artifacts" title="Picture an artifacts" />
+	</a>
+	<a href="medias/img/ritual.jpg" target="neWin">
+		<img class="photos" src="medias/img/ritual.jpg" alt="Picture an artifacts" title="Picture an artifacts" />
+	</a>
+	<a href="medias/img/yawning.jpg" target="neWin">
+		<img class="photos" src="medias/img/yawning.jpg" alt="Picture an artifacts" title="Picture an artifacts" />
+	</a>
+	</div>
+	<br><br>
+	
+	<center><h2 class="categ" id="symbols">National Symbols</h2></center>
+	<br>
+	<div class="places" align="center">
+	<a href="medias/img/anahaw.jfif" target="neWin">
+		<img class="photos" src="medias/img/anahaw.jfif" alt="Images of a National Symbol" title="Images of a National Symbol"  /></a>
+	<a href="medias/img/anthem.jfif" target="neWin">
+		<img class="photos" src="medias/img/anthem.jfif" alt="Images of a National Symbol" title="Images of a National Symbol"  /></a>
+	<a href="medias/img/arnis.jfif" target="neWin">
+		<img class="photos" src="medias/img/arnis.jfif" alt="Images of a National Symbol" title="Images of a National Symbol"  /></a>
+	<a href="medias/img/eagle.jpg" target="neWin">
+		<img class="photos" src="medias/img/eagle.jpg" alt="Images of a National Symbol" title="Tuloy ang Ligaya Album Cover"  /></a>
+	<a href="medias/img/flower.jfif" target="neWin">
+		<img class="photos" src="medias/img/flower.jfif" alt="Images of a National Symbol" title="Images of a National Symbol"  /></a>
+	<a href="medias/img/gem.jpg" target="neWin">
+		<img class="photos" src="medias/img/gem.jpg" alt="Images of a National Symbol" title="Images of a National Symbol"  /></a>
+	<a href="medias/img/hero.jfif" target="neWin">
+		<img class="photos" src="medias/img/hero.jfif" alt="Images of a National Symbol" title="Images of a National Symbol"  /></a>
+	<a href="medias/img/mango.jfif" target="neWin">
+		<img class="photos" src="medias/img/mango.jfif" alt="Images of a National Symbol" title="Images of a National Symbol" /></a>
+	<a href="medias/img/phFlag1.jfif" target="neWin">
+		<img class="photos" src="medias/img/phFlag1.jfif" alt="Images of a National Symbol" title="Images of a National Symbol"  /></a>
+	<a href="medias/img/symbols3.jpg" target="neWin">
+		<img class="photos" src="medias/img/symbols3.jpg" alt="Images of a National Symbol" title="Images of a National Symbol"  /></a>
+	</div>
+	<br><br>
+	
+	<center><h2 class="categ" id="legends">Legends</h2></center>
+	<br>
+	<div class="places" align="center">
+	<a href="medias/img/legends/A-cadaver-carried-out-of-the-site-were-the-tragic-accident-occured.jpg" target="neWin">
+		<img class="photos" src="medias/img/legends/A-cadaver-carried-out-of-the-site-were-the-tragic-accident-occured.jpg" alt="Legends in the Philippines" title="Legends in the Philippines" /></a>
+	<a href="medias/img/legends/dona-paz.jpg" target="neWin">
+		<img class="photos" src="medias/img/legends/dona-paz.jpg" alt="Legends in the Philippines" title="Legends in the Philippines" /></a>
+	<a href="medias/img/legends/romblon.jpg" target="neWin">
+		<img class="photos" src="medias/img/legends/romblon.jpg" alt="Legends in the Philippines" title="Legends in the Philippines" /></a>
+	<a href="medias/img/legends/san-juanico3.jpg" target="neWin">
+		<img class="photos" src="medias/img/legends/san-juanico3.jpg" alt="Legends in the Philippines" title="Legends in the Philippines" /></a>
+	<a href="medias/img/legends/klara.jpg" target="neWin">
+		<img class="photos" src="medias/img/legends/klara.jpg" alt="Legends in the Philippines" title="Legends in the Philippines" /></a>
+	<a href="medias/img/legends/show.jpg" target="neWin">
+		<img class="photos" src="medias/img/legends/show.jpg" alt="Legends in the Philippines" title="Legends in the Philippines" /></a>
+	<a href="medias/img/legends/conspiracytheories.jpg" target="neWin">
+		<img class="photos" src="medias/img/legends/conspiracytheories.jpg" alt="Legends in the Philippines" title="Legends in the Philippines" /></a>
+	<a href="medias/img/legends/donjuan.jpg" target="neWin">
+		<img class="photos" src="medias/img/legends/donjuan.jpg" alt="Legends in the Philippines" title="Legends in the Philippines" /></a>
+	<a href="medias/img/legends/adeter.jpg" target="neWin">
+		<img class="photos" src="medias/img/legends/adeter.jpg" alt="Legends in the Philippines" title="Legends in the Philippines" /></a>	
+	</div>
+	
+	<center><h2 class="categ" id="dialects">Dialects</h2></center>
+	<br>
+	<div class="places" align="center">
+	<a href="medias/img/bicolanoPeople.jfif" target="neWin">
+		<img class="photos" src="medias/img/bicolanoPeople.jfif" alt="image of people dancing" title="image of people dancing" /></a>
+	<a href="medias/img/cebuanoPeople.jfif" target="neWin">
+		<img class="photos" src="medias/img/cebuanoPeople.jfif" alt="image of people dancing" title="image of people dancing" /></a>
+	<a href="medias/img/hiligaynonPeople.jfif" target="neWin">
+		<img class="photos" src="medias/img/hiligaynonPeople.jfif" alt="image of people dancing" title="image of people dancing" /></a>
+	<a href="medias/img/ilocanoPeople.jfif" target="neWin">
+		<img class="photos" src="medias/img/ilocanoPeople.jfif" alt="image of people dancing" title="image of people dancing" /></a>
+	<a href="medias/img/kapampanganPeople.jfif" target="neWin">
+		<img class="photos" src="medias/img/kapampanganPeople.jfif" alt="image of people dancing" title="image of people dancing" /></a>
+	<a href="medias/img/pangasinensePeople.jfif" target="neWin">
+		<img class="photos" src="medias/img/pangasinensePeople.jfif" alt="image of people dancing" title="image of people dancing" /></a>
+	<a href="medias/img/tagalogPeople2.jfif" target="neWin">
+		<img class="photos" src="medias/img/tagalogPeople2.jfif" alt="image of people dancing" title="image of people dancing" /></a>
+	<a href="medias/img/warayPeople.jfif" target="neWin">
+		<img class="photos" src="medias/img/warayPeople.jfif" alt="image of people dancing" title="image of people dancing" /></a>
+	</div>
+	
+	<center><h2 class="categ" id="cuisines">Local Cuisines</h2></center>
+	<br>
+	<div class="places" align="center">
+	<a href="medias/img/foods/batchoy.jpg" target="neWin">
+		<img class="photos" src="medias/img/foods/batchoy.jpg" alt="image of people dancing" title="image of people dancing" /></a>
+	<a href="medias/img/foods/bicol.jpg" target="neWin">
+		<img class="photos" src="medias/img/foods/bicol.jpg" alt="image of people dancing" title="image of people dancing" /></a>
+	<a href="medias/img/foods/crocodile.jpg" target="neWin">
+		<img class="photos" src="medias/img/foods/crocodile.jpg" alt="image of people dancing" title="image of people dancing" /></a>
+	<a href="medias/img/foods/foods in luzon.jpg" target="neWin">
+		<img class="photos" src="medias/img/foods/foods in luzon.jpg" alt="image of people dancing" title="image of people dancing" /></a>
+	<a href="medias/img/foods/inasal.jpg" target="neWin">
+		<img class="photos" src="medias/img/foods/inasal.jpg" alt="image of people dancing" title="image of people dancing" /></a>
+	<a href="medias/img/foods/seafoods.jpg" target="neWin">
+		<img class="photos" src="medias/img/foods/seafoods.jpg" alt="image of people dancing" title="image of people dancing" /></a>
+	<a href="medias/img/foods/sinigang.jpg" target="neWin">
+		<img class="photos" src="medias/img/foods/sinigang.jpg" alt="image of people dancing" title="image of people dancing" /></a>
+	<a href="medias/img/foods/sisig.jpg" target="neWin">
+		<img class="photos" src="medias/img/foods/sisig.jpg" alt="image of people dancing" title="image of people dancing" /></a>
+	</div>
+	
+	<center><h2 class="categ" id="arts">Arts</h2></center>
+	<br>
+	<div class="places" align="center">
+	<a href="medias/img/bayanihan.jpg" target="neWin">
+		<img class="photos" src="medias/img/bayanihan.jpg" alt="image of an art" title="image of an art" /></a>
+	<a href="medias/img/katipunan.jpg" target="neWin">
+		<img class="photos" src="medias/img/katipunan.jpg" alt="image of an art" title="image of an art" /></a>
+	<a href="medias/img/spanish-philippines.jpg" target="neWin">
+		<img class="photos" src="medias/img/spanish-philippines.jpg" alt="image of an art" title="image of an art" /></a>
+	<a href="medias/img/spolarium.jpg" target="neWin">
+		<img class="photos" src="medias/img/spolarium.jpg" alt="image of an art" title="image of an art" /></a>
+	</div>
+	
+		<div class="foot"> 
+		<img src="medias/img/juanderful.png"> 
+			<ul> <li><a href=".../../aboutUs.html">About Us</a></li> 
+			<li><a href="../../photoGallery.html">Gallery</a></li> 
+			<li><a href="../../contactUs.html">Contact Us</a></li> 
+			</ul> <p>Juanderful Philippines 2021</p> </div>
+
+</body>
+</html>

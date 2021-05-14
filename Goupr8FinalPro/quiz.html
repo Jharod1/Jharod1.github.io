@@ -1,0 +1,136 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300&family=Montserrat&family=Poppins&family=Slackey&family=Staatliches&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>Juanderful Philippines: Quiz</title>
+    <script type="text/javascript">
+        function checkResult(){
+            var totScore = 0;
+            var q1=document.quiz.num1.value;
+            var q2=document.quiz.num2.value;
+            var q3=document.quiz.num3.value;
+            var q4=document.quiz.num4.value;
+            var q5=document.quiz.num5.value;
+            var result=document.getElementById('result');
+            var output=document.getElementById('output');
+            var explore=document.getElementById('explore');
+            var del = document.getElementById('del');
+
+            if (q1=="choice2") {
+                totScore++;
+            };
+            if (q2=="choice21") {
+                totScore++;
+            };
+            if (q3=="choice34") {
+                totScore++;
+            };
+            if (q4=="choice43") {
+                totScore++;
+            };
+            if (q5=="choice54") {
+                totScore++;
+            };
+            
+            del.style.display="none";
+            if (totScore<3){
+                result.textContent="Your Score: "+totScore;
+                output.textContent="Explore our site to learn more.";
+                explore.textContent="Explore blogs";
+            };
+           if (totScore>=3){
+                result.textContent="Your Score: "+totScore+".";
+                output.textContent="Congratulations! You know the basics. Explore our site to know more.";
+                explore.textContent="Explore the blogs";
+            };
+        }
+    </script>
+    <style type="text/css">
+    
+    </style>
+</head>
+<body>
+    <link rel="stylesheet" type="text/css" href="quizDesign.css">
+    
+    <!--Tababan, Lovelle-->
+    <!--DATE-->
+
+    <div class="nav">
+		<a href="index.html"><img class="icon" src="Medias/img/icon.png"></a>
+		<ul>
+			<li class="dh"><a  href="index.html">HOME</a></li>
+            <li class="dh"><a  href="aboutUs.html">ABOUT US</a></li>  
+            <li class="dropdown">
+                <a href="" class="dropbtn">EXPLORE</a>
+            <div class="dropdown-content">
+                <a href="Pages/history/history.html" >History</a>
+                <a href="Pages/culture/culture.html" id="active">Culture</a>
+                <a href="Pages/travel/travel.html">Travel</a>
+            </div>
+            </li>
+            <li class="dh"><a href="">FUN FACTS</a></li>
+			<li class="dh"><a href="">PHOTO GALLERY</a></li>
+            <li class="dh"><a href="">CONTACT US</a></li>
+		</ul>
+    </div>
+    <br><br><br><br><br><br>
+    
+    <div class="middle">
+    <form name="quiz" id="del">    
+        <h1>Test your Knowledge</h1>
+        <h2>How well did you know the Philippines?</h2>
+        <br><br><br>
+       <h3>1. What is the Capital of the Philippines?</h3>
+       <p>
+       <input type="radio" id="choice1" name="num1" value="choice1" required><label for="choice1">Palawan</label><br><br>
+       <input type="radio" id="choice2" name="num1" value="choice2"><label for="choice2">Manila</label><br><br>
+       <input type="radio" id="choice3" name="num1" value="choice3"><label for="choice3">Cavite</label><br><br>
+       <input type="radio" id="choice4" name="num1" value="choice4"><label for="choice4">Cebu</label>
+        </p>
+       <br>
+       <h3>2. What is the Largest Island in the Philippines?</h3>
+       <p>
+        <input type="radio" id="choice21" name="num2" value="choice21" required><label for="choice21">Luzon</label><br><br>
+        <input type="radio" id="choice22" name="num2" value="choice22"><label for="choice22">Visayas</label><br><br>
+        <input type="radio" id="choice23" name="num2" value="choice23"><label for="choice23">Mindanao</label><br><br>
+        <input type="radio" id="choice24" name="num2" value="24"><label for="choice24">None of the Above</label>
+        </p>
+       <br>
+       <h3>3. Who is the National Hero of the Philippines?</h3>
+       <p>
+        <input type="radio" id="choice31" name="num3" value="choice31" required><label for="choice31">Andres Bonifacio</label><br><br>
+        <input type="radio" id="choice32" name="num3" value="choice32"><label for="choice32">Antonio Luna</label><br><br>
+        <input type="radio" id="choice33" name="num3" value="choice33"><label for="choice33">Emilio Aguinaldo</label><br><br>
+        <input type="radio" id="choice34" name="num3" value="choice34"><label for="choice34">Jose Rizal</label>
+        </p>
+       <br>
+       <h3>4. When do we Celebrate Independence Day?</h3>
+       <p>
+        <input type="radio" id="choice41" name="num4" value="choice41" required><label for="choice41">July 12</label><br><br>
+        <input type="radio" id="choice42" name="num4" value="choice42"><label for="choice42">July 21</label><br><br>
+        <input type="radio" id="choice43" name="num4" value="choice43"><label for="choice43">June 12</label><br><br>
+        <input type="radio" id="choice44" name="num4" value="choice44"><label for="choice44">July 21</label>
+        </p>
+       <br>
+       <h3>5. What is the longest bridge across a body of seawater in the Philippines</h3>
+       <p>
+        <input type="radio" id="choice51" name="num5" value="choice51" required><label for="choice51">Macapagal Bridge</label><br><br>
+        <input type="radio" id="choice52" name="num5" value="choice52"><label for="choice52">Buntun Bridge</label><br><br>
+        <input type="radio" id="choice53" name="num5" value="choice53"><label for="choice53">Osmeña Bridge</label><br><br>
+        <input type="radio" id="choice54" name="num5" value="choice54"><label for="choice54">San Juanico Bridge</label>
+        </p>
+       <br>
+
+        <input type="button" name="submit" value="Submit" onclick="checkResult()">
+    </form> 
+</div>
+    <div class="hide" id="hid">
+        <p id="result"></p>
+        <p id="output"></p>
+        <a id="explore" href="index.html"></a>
+    </div>
+</body>
+</html>
